@@ -60,7 +60,7 @@ main{
     padding: 10px;
 }
 section{
-  margin-top: 60px;
+  margin-top:  60px;
 }
 .main-layout {
   display: flex;
@@ -114,7 +114,7 @@ footer{
 .exp-container {
   max-width: 1000px;
   margin: 0 auto;
-  padding: 15px 40px;
+  padding: 10px 40px;
 }
 .row {
   display: flex;

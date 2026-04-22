@@ -224,26 +224,42 @@
         }
       }
       //百分比
-      let circles = document.querySelectorAll('.circle');
-
-      circles.forEach(circle => {
-        let progress = circle.querySelector('.progress');
-        let text = circle.querySelector('.text');
-        let target = circle.getAttribute('data-percent');
-
-        let percent = 0;
-
-        let interval = setInterval(() => {
-          if (percent >= target) {
-            clearInterval(interval);
-          } else {
-            percent++;
-           
-            let offset = 314 - (314 * percent / 100);
-            progress.style.strokeDashoffset = offset;
-          }
-        }, 20);
-      });
+        let circles = document.querySelectorAll('.circle');
+        
+        let observer = new IntersectionObserver((entries) => {
+          entries.forEach(entry => {
+            if (entry.isIntersecting) {
+        
+              let circle = entry.target;
+              let progress = circle.querySelector('.progress');
+              let text = circle.querySelector('.text');
+              let target = circle.getAttribute('data-percent');
+        
+              let percent = 0;
+        
+              let interval = setInterval(() => {
+                if (percent >= target) {
+                  clearInterval(interval);
+                } else {
+                  percent++;
+                  text.innerText = percent + "%";
+        
+                  let offset = 314 - (314 * percent / 100);
+                  progress.style.strokeDashoffset = offset;
+                }
+              }, 20);
+        
+              observer.unobserve(circle); 
+            }
+          });
+        }, {
+          threshold: 0.5  
+        });
+        
+        circles.forEach(circle => {
+          observer.observe(circle);
+        });
+        
 
     </script>
     

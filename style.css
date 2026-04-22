@@ -1,0 +1,248 @@
+body {
+  font-family: "Montserrat", sans-serif;
+  margin: 0;
+}
+nav {
+    background: white;
+    margin: 0px;
+    padding: 0px;
+  }
+
+.navbar {
+  position: fixed;   
+  top: 0px; 
+  left: 0px;
+  width: 95%;          
+  background: white;     
+  display: flex;
+  justify-content: space-between; 
+  align-items: center;             
+  height: 70px;                    
+  padding: 2px 15px;                 
+  z-index: 999;       
+}
+
+.menu {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+  }
+
+  .menu li {
+    position: relative;
+  }
+
+  .menu a {
+    display: block;
+    padding: 15px 20px;
+    color: #1b8ab4;
+    text-decoration: none;
+  }
+
+  .menu a:hover {
+    background: whitesmoke;
+  }
+
+.logo img {
+  height: 60px;
+  width: auto;
+  cursor: pointer;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+}
+main{
+    margin: 35px 0;
+    padding: 10px;
+}
+.main-layout {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  padding: 0px 250px;
+}
+
+.idphoto img{
+  width: 250px;   
+  height: auto;
+}
+.right {
+  flex: 1;
+  text-align: left;
+  padding-top: 5px;
+  padding-left: 50px;
+}
+footer{
+    color: #777b7f;
+    text-align: center;
+    padding: 5px 0;
+}
+#topBtn {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  z-index: 999;
+  background: #777b7f;
+  color: white;
+  border: none;
+  padding: 15px 15px;
+  font-size: 16px;
+  border-radius: 50%;
+  width: 45px;
+  height: 45px;
+  cursor: pointer;
+  line-height: 1;
+  display: none;
+  transition: 0.3s;
+}
+
+#topBtn:hover {
+  background: #444;
+}
+.title{
+    text-align: center;
+    color: #1b8ab4;
+}
+
+.exp-container {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 40px;
+}
+.row {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 30px;
+}
+.exp {
+  text-align: center;
+  width: 30%;
+}
+.exp img {
+  width: 100%;
+  height: 400px;
+  object-fit: cover;
+  transition: transform 0.3s;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+.exp:hover img {
+  transform: scale(1.05);
+}
+/* 背景遮罩 */
+.modal {
+  display: none;
+  position: fixed;
+  top: 75px;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.6);
+}
+
+/* 視窗內容 */
+.modal-content {
+  background: white;
+  width: 500px;
+  margin: 15% auto;
+  padding: 30px;
+  border-radius: 15px;
+  text-align: left;
+  position: relative;
+  color: black;
+}
+
+/* 關閉按鈕 */
+.close {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  font-size: 20px;
+  cursor: pointer;
+}
+.modal-content {
+  animation: pop 0.3s ease;
+}
+#modalDesc {
+  white-space: pre-line;
+}
+a{
+    color: black;
+}
+/*百分比*/
+.skills{
+  display: flex;
+  gap: 55px;
+  justify-content: center;
+  flex-wrap: wrap;
+  background-color: whitesmoke;
+  margin: 0px 250px;
+}
+
+.box {
+  text-align: center;
+}
+
+.circle {
+  position: relative;
+  width: 120px;
+  height: 120px;
+}
+
+svg {
+  transform: rotate(-90deg);
+}
+
+circle {
+  fill: none;
+  stroke-width: 8;
+  stroke-linecap: round;
+}
+
+.bg {
+  stroke: #444;
+}
+
+.progress {
+  stroke: #1b8ab4;
+  stroke-dasharray: 314; /* 2πr ≈ 314 */
+  stroke-dashoffset: 314;
+}
+
+.text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 20px;
+  color: #777b7f;
+}
+h3{
+  color: #444;
+  text-align: center;
+}
+soft-skills{
+  background-color: whitesmoke;
+  margin: 0px 250px;
+}
+
+.contact-icons {
+  display: flex;
+  gap: 15px;          
+  justify-content: center;
+}
+
+.icon {
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.icon:hover {
+  transform: scale(1.2);
+  filter: brightness(1.3);
+}
